@@ -48,20 +48,19 @@ def create_body_text():
     
     return body
 
-if __name__ == "__main__":
-    #Get filepath for pdf generated, title with today's date and body for report function
-    filepath = os.path.dirname(os.path.abspath(sys.argv[0])) + '/tmp/processed.pdf'
-    date_str = datetime.datetime.today().strftime('%B %d, %Y')
-    title = "Processed Update on " + date_str
-    body_text = create_body_text()
-    generate_report(filename=filepath, title=title, body_text=body_text)
+#Get filepath for pdf generated, title with today's date and body for report function
+filepath = os.path.dirname(os.path.abspath(sys.argv[0])) + '/tmp/processed.pdf'
+date_str = datetime.datetime.today().strftime('%B %d, %Y')
+title = "Processed Update on " + date_str
+body_text = create_body_text()
+generate_report(filename=filepath, title=title, body_text=body_text)
     
-    #Generate email of report as well once it is generated
-    sender = "automation@example.com"
-    receiver = "{}@example.com".format(os.environ.get('USER'))
-    subject = "Fruits Report"
-    body = "Here is the fruit report pdf of all fruits with their weights."
-    attachment_path = filepath
+#Generate email of report as well once it is generated
+sender = "automation@example.com"
+receiver = "{}@example.com".format(os.environ.get('USER'))
+subject = "Fruits Report"
+body = "Here is the fruit report pdf of all fruits with their weights."
+attachment_path = filepath
 
-    message = emails.create_message(sender, receiver, subject, body,attachment_path=attachment_path)
-    emails.send(message)
+message = emails.create_message(sender, receiver, subject, body,attachment_path=attachment_path)
+emails.send(message)
