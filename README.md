@@ -11,4 +11,4 @@ Here are the scripts I created for this project:
 5) emails.py file for generating emails for the reports and health checks
 6) healthchecks.py to perform all system health checks such as if CPU usage is above 80%, Available disk space is lower than 20%, Available memory is less than 100MB and the hostname "localhost" cannot be resolved to "127.0.0.1"
 
-This was the Final Project for the Google IT Automation with Python Course
+This was the Final Project for the Google IT Automation with Python Course.
