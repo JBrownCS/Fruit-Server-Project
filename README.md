@@ -7,7 +7,7 @@ Here are the scripts I created for this project:
 1) fruitImage.py for altering the .tif files to jpeg
 2) fruitImageUpload.py for uploading the updated images to the web service via the POST method
 3) fruitDescriptionUpload.py for reading all the description .txt files and posting each fruit description with its corresponding image to the web service. I provided an example picture using Google's images, but I provided my own for testing. I have a image_original folder so the original images are still kept intact.
-4) reports.py for gathering all the fruit names and weights and generating a pdf file with that information. The end result is in the tmp folder
+4) report_email.py for gathering all the fruit names and weights and generating a pdf file with that information. The resulting pdf is in the tmp folder and gets emailed once generated.
 5) emails.py file for generating emails for the reports and health checks
 6) healthchecks.py to perform all system health checks such as if CPU usage is above 80%, Available disk space is lower than 20%, Available memory is less than 100MB and the hostname "localhost" cannot be resolved to "127.0.0.1"
 
